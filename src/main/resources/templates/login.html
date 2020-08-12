@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>login</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link th:href="@{/css/login.css}">
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+<form>
+	<div class="form-group">
+	<label for="name">User Name :
+	<input type="text" class="form-control" id="username">
+	</label>
+	</div>
+	<div class="form-group">
+	<label for="password">Password :
+	<input type="password" class="form-control" id="password">
+	</label>
+	</div>
+	<button type="submit" class="btn btn-primary">Login</button>
+	<button class="btn btn-danger">Cancel</button>
+</form>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>MyShop</title>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="wrapper">
+
+		<!-- Sidebar -->
+		<nav id="sidebar" class="">
+			<div class="sidebar-header">
+				<img th:src="@{/img/happyshop.jpg}" width="70" height="70"
+					class="align-top left-img" alt="">
+				<h4 class="title">MyShop</h4>
+			</div>
+			<ul class="list-unstyled components">
+				<p>Online Shopping</p>
+				<li><a href="#menSubmenu" data-toggle="collapse"
+					aria-expanded="false" class="dropdown-toggle">Men</a>
+					<ul class="collapse list-unstyled" id="menSubmenu">
+						<li><a href="#">Top</a></li>
+						<li><a href="#">Bottom</a></li>
+						<li><a href="#">Accessories</a></li>
+					</ul></li>
+				<li><a href="#womenSubmenu" data-toggle="collapse"
+					aria-expanded="false" class="dropdown-toggle">Women</a>
+					<ul class="collapse list-unstyled" id="womenSubmenu">
+						<li><a href="#">Top</a></li>
+						<li><a href="#">Bottom</a></li>
+						<li><a href="#">Accessories</a></li>
+					</ul></li>
+				<li><a href="#babySubmenu" data-toggle="collapse"
+					aria-expanded="false" class="dropdown-toggle">Baby</a>
+					<ul class="collapse list-unstyled" id="babySubmenu">
+						<li><a href="#">Top</a></li>
+						<li><a href="#">Bottom</a></li>
+						<li><a href="#">Accessories</a></li>
+					</ul></li>
+				<li><a href="#cosSubmenu" data-toggle="collapse"
+					aria-expanded="" class="dropdown-toggle">Cosmetics</a>
+					<ul class="collapse list-unstyled" id="cosSubmenu">
+						<li><a href="#">Foundation</a></li>
+						<li><a href="#">Skin Care</a></li>
+						<li><a href="#">Lipsticks</a></li>
+					</ul></li>
+			</ul>
+		</nav>
+
+		<!-- Content  -->
+		<div id="content">
+			<nav class="navbar navbar-light bg-light">
+				<div class="container-fluid">
+					<button type="button" id="sidebarCollapse" class="btn btn-info">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
+					<form class="form-inline my-2 my-lg-0 pull-right">
+						<input class="form-control mr-sm-2" type="search"
+							placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-info  my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+			<div class="item-list">
+				<div class="row">
+					<div class="col-md-3" align="center">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="img-rounded left-img" id="show-img" alt="">
+						<p class="price">
+							<input type="checkbox" id="itemcheck" class="mr-2">Price
+							: $100
+						</p>
+
+						<div class="img-thumbnail">
+							<img th:src="@{/img/man-shirt1.jpeg}" width="30" height="30"
+								class="align-top thumb-img" alt=""> <img
+								th:src="@{/img/man-shirt2.jpeg}" width="30" height="30"
+								class="align-top thumb-img" alt=""> <img
+								th:src="@{/img/man-shirt3.jpeg}" width="30" height="30"
+								class="align-top thumb-img" alt=""> <img
+								th:src="@{/img/man-shirt4.jpeg}" width="30" height="30"
+								class="align-top thumb-img" alt="">
+						</div>
+					</div>
+					<div class="col-md-3">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="align-top left-img" alt="">
+					</div>
+					<div class="col-md-3">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="align-top left-img" alt="">
+					</div>
+					<div class="col-md-3">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="align-top left-img" alt="">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="align-top left-img" alt="">
+					</div>
+					<div class="col-md-3">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="align-top left-img" alt="">
+					</div>
+					<div class="col-md-3">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="align-top left-img" alt="">
+					</div>
+					<div class="col-md-3">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="align-top left-img" alt="">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="align-top left-img" alt="">
+					</div>
+					<div class="col-md-3">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="align-top left-img" alt="">
+					</div>
+					<div class="col-md-3">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="align-top left-img" alt="">
+					</div>
+					<div class="col-md-3">
+						<img th:src="@{/img/happyshop.jpg}" width="100" height="100"
+							class="align-top left-img" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="btn order-btn">Order</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery CDN - Slim version (=without AJAX) -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<!-- Popper.JS -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+		integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+		crossorigin="anonymous"></script>
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- jQuery Custom Scroller CDN -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#sidebarCollapse').on('click', function() {
+				$('#sidebar').toggleClass('active');
+			});
+
+			$('.thumb-img').on('click', function() {
+				let changeSrc = this.src;
+				let showElement = document.getElementById('show-img');
+				let showSrc = showElement.src;
+				console.log(changeSrc, showSrc);
+				showElement.src = changeSrc;
+				this.src = showSrc;
+			});
+
+		});
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>MyShop</title>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<link th:href="@{/css/style1.css}" rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="header">
+		<div class="header-body">
+			<div class="header-top"></div>
+			<div class="header-container">
+				<div
+					class="header-row search-menu-bar py-4 my-1 d-flex justify-content-around">
+					<div class="header-column">
+						<h3 class="font-weight-bold">MY-SHOP</h3>
+					</div>
+					<div class="header-column p-2 search-column">
+						<div class="input-group ">
+							<form class="input-form-group">
+								<input type="text" placeholder="Search..."> <span><button
+										type="submit" class="search-btn">
+										<i class="fa fa-search" aria-hidden="true"></i>
+									</button></span>
+							</form>
+						</div>
+					</div>
+					<div class="header-column p-1 d-flex justify-content-end">
+						<a href="#" class="btn btn-link mr-4 font-weight-bold">Login</a>
+						<div class="mini-cart d-flex justify-content-end">
+							<span class="font-weight-bold">Cart / </span>
+							<p>
+								$0.0 <span><i class="fa fa-cart-plus" aria-hidden="true"></i></span>
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="header-row menu-bar">
+				<div class="menu-item-group d-flex flex-row justify-content-end">
+					<ul class="list-inline">
+						<li class="list-inline-item"><a href="#">Home</a></li>
+						<li class="list-inline-item"><a href="#">Category</a></li>
+						<li class="list-inline-item"><a href="#">Services</a></li>
+						<li class="list-inline-item"><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid  py-4 bg-light">
+		<div class="row content-row d-flex flex-row">
+			<div class="col-md-3 content-left">
+				<nav id="sidebar" class="m-4">
+					<ul class="list-unstyled components">
+						<li class="menu-item"><a href="#fashionSubmenu"
+							data-toggle="collapse" aria-expanded="false"
+							class="dropdown-toggle">FASHION</a>
+							<ul class="collapse list-unstyled" id="fashionSubmenu">
+								<li><a href="#">Dress</a></li>
+								<li><a href="#">Hats</a></li>
+								<li><a href="#">Accessories</a></li>
+								<li><a href="#">Shoes</a></li>
+							</ul></li>
+						<li class="menu-item"><a href="#priceSubmenu"
+							data-toggle="collapse" aria-expanded="false"
+							class="dropdown-toggle">PRICE</a>
+							<div class="collapse price p-2" id="priceSubmenu">
+								<form class="input-price-form">
+									<input type="text" class="input-sm less-price" size="5" /> <span
+										class="font-weight-bold to"> To </span> <input type="text"
+										class="input-sm more-price" size="5" />
+									<button type="submit" class="btn btn-primary filter-btn mt-2 ">Filter</button>
+								</form>
+							</div></li>
+						<li class="menu-item"><a href="#sizeSubmenu"
+							data-toggle="collapse" aria-expanded="false"
+							class="dropdown-toggle">SIZE</a>
+							<div class="collapse size-group" id="sizeSubmenu">
+								<ul class="list-inline">
+									<li class="list-inline-item"><a href="#">S</a></li>
+									<li class="list-inline-item active"><a href="#">M</a></li>
+									<li class="list-inline-item"><a href="#">L</a></li>
+									<li class="list-inline-item"><a href="#">XL</a></li>
+									<li class="list-inline-item"><a href="#">2XL</a></li>
+									<li class="list-inline-item"><a href="#">3XL</a></li>
+								</ul>
+							</div></li>
+						<li class="menu-item"><a href="#cosSubmenu"
+							data-toggle="collapse" aria-expanded="" class="dropdown-toggle">BRAND</a>
+							<ul class="collapse list-unstyled" id="cosSubmenu">
+								<li><a href="#">Adaidas</a></li>
+								<li><a href="#">Camel</a></li>
+								<li><a href="#">Samsung Galaxy</a></li>
+							</ul></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-md-6 content-center">
+				<div class="row item-select">
+					<div class="col-md-5 pt-4 ">
+						<form>
+							<div class="form-group">
+								<select class="form-control">
+									<option>Sort By newness</option>
+									<option>Sort By popularity</option>
+									<option>Sort By average rating</option>
+									<option>Sort By price : low to high</option>
+									<option>Sort By price : high to low</option>
+								</select>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-7"></div>
+				</div>
+				<div class="row mb-4 item-detail">
+					<div class="col-md-5">
+						<img th:src="@{/img/product-1.jpg}" width="250px" height="250px" />
+					</div>
+					<div class="col-md-7">
+						<a href="#" class="item-category font-weight-bold">Long Hoddie</a>
+						<p>
+							<i class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i>
+						</p>
+						<p>
+							<strong class="text-color-default org-price"><del>$69</del></strong>
+							<strong class="text-color-default prom-price">$59</strong>
+						</p>
+						<p class="item-desc mt-4">Lorem ipsum dolor sit amet,
+							consectetur adipiscing elit. Phasellus blandit massa enim. Nullam
+							id varius.</p>
+						<hr class="my-4">
+						<a href="#" class="btn btn-primary cart-btn">ADD TO CART</a>
+					</div>
+				</div>
+				<div class="row mb-4 item-detail">
+					<div class="col-md-5">
+						<img th:src="@{/img/product-2.jpg}" width="250px" height="250px" />
+					</div>
+					<div class="col-md-7">
+						<a href="#" class="item-category font-weight-bold">Leather
+							belt</a>
+						<p>
+							<i class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i>
+						</p>
+						<p>
+							<strong class="text-color-default org-price"><del>$29</del></strong>
+							<strong class="text-color-default prom-price">$19</strong>
+						</p>
+						<p class="item-desc mt-4">Lorem ipsum dolor sit amet,
+							consectetur adipiscing elit. Phasellus blandit massa enim. Nullam
+							id varius.</p>
+						<hr class="my-4">
+						<a href="#" class="btn btn-primary cart-btn">ADD TO CART</a>
+					</div>
+				</div>
+				<div class="row mb-4 item-detail">
+					<div class="col-md-5">
+						<img th:src="@{/img/product-3.jpg}" width="250px" height="250px" />
+					</div>
+					<div class="col-md-7">
+						<a href="#" class="item-category font-weight-bold">Jack
+							Sandals</a>
+						<p>
+							<i class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i> <i
+								class="fa fa-star-o" aria-hidden="true"></i>
+						</p>
+						<p>
+							<strong class="text-color-default org-price"><del>$40</del></strong>
+							<strong class="text-color-default prom-price">$30</strong>
+						</p>
+						<p class="item-desc mt-4">Lorem ipsum dolor sit amet,
+							consectetur adipiscing elit. Phasellus blandit massa enim. Nullam
+							id varius.</p>
+						<hr class="my-4">
+						<a href="#" class="btn btn-primary cart-btn">ADD TO CART</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 content-right p-4">
+				<div class="logo-group mt-4">
+					<img th:src="@{/img/happyshop.jpg}" width="40" height="40"
+						class="align-top mb-2" alt="">
+					<h3 class="title font-weight-bold">
+						<i>MY-SHOP</i>
+						</h4>
+						<p class="online-shop">Online Shopping
+						<p>
+				</div>
+				<hr class="my-4">
+				<div class="ship-icon-box d-flex flex-row">
+					<div class="icon-box p-4">
+						<i class="fa fa-truck" aria-hidden="true"></i>
+					</div>
+					<div class="icon-info p-4">
+						<p class="font-secondary">FREE SHIPPING</p>
+					</div>
+				</div>
+				<hr class="my-4">
+				<div class="currency-icon-box d-flex flex-row">
+					<div class="icon-box p-4">
+						<i class="fa fa-usd" aria-hidden="true"></i>
+					</div>
+					<div class="icon-info p-4">
+						<p class="font-secondary">100% MONEY BACK GUARANTEE</p>
+					</div>
+				</div>
+				<hr class="my-4">
+				<div class="currency-icon-box d-flex flex-row">
+					<div class="icon-box p-4">
+						<i class="fa fa-commenting-o" aria-hidden="true"></i>
+					</div>
+					<div class="icon-info p-4">
+						<p class="font-secondary">ONLINE SUPPORT 24/7</p>
+					</div>
+				</div>
+				<hr class="my-4">
+				<div class="p-2">
+					<div class="img-frame-info">
+						<p class="font-weight-bold">Amazing</p>
+						<h4 class="font-weight-bold">LADIES DRESSES</h4>
+					</div>
+					<img th:src="@{/img/product-bg-15.jpg}" class="img-fluid adv-photo" />
+					<div class="shop-btn-group"><a href="#" class="btn btn-primary btn-outline btn-rounded font-italic shop-btn">Shop Now!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jQuery CDN - Slim version (=without AJAX) -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<!-- Popper.JS -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+		integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+		crossorigin="anonymous"></script>
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- jQuery Custom Scroller CDN -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+</body>
+</html>
