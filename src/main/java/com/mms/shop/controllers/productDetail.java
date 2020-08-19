@@ -4,13 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class loginController {
+public class productDetail {
 	
-	@RequestMapping({" ", "/login"})
-	public String showLoginPage() {
-		
-		return "index";
-		
+	@RequestMapping("/productDetail")
+	public String getProductDetail() {
+		return "product_detail";
 	}
 
 }
