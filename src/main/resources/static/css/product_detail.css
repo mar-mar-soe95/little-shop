@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .detail-right {
-	background: #c0c0c0;
+	/* background: #c0c0c0; */
 	border: 1px solid thin;
 }
 
@@ -53,4 +53,28 @@
 	content: '>';
 	font-size: 55px;
 	color: red;
+}
+.quantity{
+	display : inline;
+	border : 1px solid #c0c0c0;
+	float : left;
+	
+}
+.minus, .qty, .plus {
+	min-width : 30px;
+	min-height : 30px;
+	max-width : 30px;
+	max-height : 30px;
+	font-size : 18px;
+}
+.cart-btn{
+	border-radius : 25px;
+	font-size : 12px;
+}
+.share-list{
+	display : inline;
+	list-style : none;
+}
+.share-list i{
+	font-size : 30px;
 }
